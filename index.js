@@ -11,3 +11,5 @@ let user = {
 console.log(user.age)
 console.log(user.scream = 'aaaaaaaaa')
 console.log(user)
+
+const a = new Map()
