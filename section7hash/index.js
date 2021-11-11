@@ -25,6 +25,7 @@ class HashTable {
       // console.log("this is the value", address);
     }
     this.data[address].push([key, value]);
+    console.log(this.data)
     return this.data
   }
 
@@ -33,7 +34,7 @@ class HashTable {
   // }
 }
 
-const myHashTable = new HashTable(2);
+const myHashTable = new HashTable(1);
 // var testing1 = myHashTable._hash("grapes");
 // console.log(testing1);
 // var a = myHashTable.set('grapes')
@@ -45,4 +46,3 @@ const myHashTable = new HashTable(2);
 var a = myHashTable.set("grapes", 10000);
 var b = myHashTable.set("apples", 54);
 console.log(a)
-console.log(b)
