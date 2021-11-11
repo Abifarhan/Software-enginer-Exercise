@@ -14,12 +14,14 @@ class HashTable {
   }
 
   set(key, value) {
-    let setValue  = 1
-
-    var a = this._hash(key)
-    value = a 
-    // console.log(value)
-    return value
+    let address = this._hash(key)
+    if(!this.data[address]){
+      this.data[address] = []
+      console.log(this.data[address])
+      var c = this.data[address].push([key, value])
+      console.log(c)
+      console.log(this.data)
+    }
   }
 
   get(){
@@ -30,6 +32,9 @@ class HashTable {
 const myHashTable = new HashTable(50);
 // var testing1 = myHashTable._hash("grapes");
 // console.log(testing1);
-var a = myHashTable.set('grapes')
-var total = myHashTable.get
-console.log(total)
+// var a = myHashTable.set('grapes')
+// var total = myHashTable.get
+// console.log(total)
+
+myHashTable.set('grapes', 10000)
+myHashTable.set('apple', 10000)
