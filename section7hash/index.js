@@ -25,13 +25,19 @@ class HashTable {
       // console.log("this is the value", address);
     }
     this.data[address].push([key, value]);
-    console.log(this.data)
+    // console.log(this.data)
     return this.data
   }
 
   // get() {
   //   var returnValue = this.set;
   // }
+
+  get(key){
+    let address = this._hash(key)
+    const currentBucket = this.data[address]
+    console.log(currentBucket)
+  }
 }
 
 const myHashTable = new HashTable(1);
@@ -43,6 +49,8 @@ const myHashTable = new HashTable(1);
 
 // myHashTable.set("grapes", 10000);
 // myHashTable.set("apple", 10000);
-var a = myHashTable.set("grapes", 10000);
-var b = myHashTable.set("apples", 54);
-console.log(a)
+myHashTable.set("grapes", 10000);
+myHashTable.set("apples", 54);
+
+myHashTable.get('apples')
+
