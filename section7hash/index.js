@@ -17,25 +17,32 @@ class HashTable {
     let address = this._hash(key);
     if (!this.data[address]) {
       this.data[address] = [];
-      console.log(this.data[address]);
-      var c = this.data[address].push([key, value]);
-      console.log(c);
-      console.log(this.data);
-      console.log("this is the value", address);
+      // console.log(this.data[address]);
+      // this is the hashmap work
+      // var c = this.data[address].push([key, value]);
+      // console.log(c);
+      // console.log(this.data);
+      // console.log("this is the value", address);
     }
+    this.data[address].push([key, value]);
+    return this.data
   }
 
-  get() {
-    var returnValue = this.set;
-  }
+  // get() {
+  //   var returnValue = this.set;
+  // }
 }
 
-const myHashTable = new HashTable(50);
+const myHashTable = new HashTable(2);
 // var testing1 = myHashTable._hash("grapes");
 // console.log(testing1);
 // var a = myHashTable.set('grapes')
 // var total = myHashTable.get
 // console.log(total)
 
-myHashTable.set("grapes", 10000);
-myHashTable.set("apple", 10000);
+// myHashTable.set("grapes", 10000);
+// myHashTable.set("apple", 10000);
+var a = myHashTable.set("grapes", 10000);
+var b = myHashTable.set("apples", 54);
+console.log(a)
+console.log(b)
