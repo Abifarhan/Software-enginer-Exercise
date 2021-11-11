@@ -37,6 +37,15 @@ class HashTable {
     let address = this._hash(key)
     const currentBucket = this.data[address]
     console.log(currentBucket)
+    if(currentBucket){
+      for(let i = 0; i < currentBucket.length; i++){
+        if(currentBucket[i][0] === key){
+          console.log(currentBucket[i][1])
+          return currentBucket[i][1]
+        }
+      }
+    }
+    return undefined
   }
 }
 
@@ -52,5 +61,5 @@ const myHashTable = new HashTable(1);
 myHashTable.set("grapes", 10000);
 myHashTable.set("apples", 54);
 
-myHashTable.get('apples')
+myHashTable.get('grapes')
 
