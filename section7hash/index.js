@@ -3,7 +3,7 @@ class HashTable {
       this.data = new Array(size);
     }
   
-    _hash(key) {
+    _hash(key) { // _ meaning the object will be private
       let hash = 0;
       for (let i =0; i < key.length; i++){
           hash = (hash + key.charCodeAt(i) * i) % this.data.length
@@ -18,9 +18,4 @@ class HashTable {
   function get(p1){
       console.log("Anda masukkan ", p1)
   }
-  const myHashTable = new HashTable(50);
-//   myHashTable.set('grapes', 10000)
-
-//   myHashTable.get('grapes')
-//   myHashTable.set('apples', 9)
-//   myHashTable.get('apples')
+  const myHashTable = new HashTable(50)
