@@ -8,38 +8,19 @@
 // Given an array = [2,3,4,5]
 // It should return undefined
 
+const array1 = [2, 5, 1, 2, 3, 5, 1, 2, 4];
+const array2 = [2, 1, 1, 2, 3, 5, 1, 2, 4];
 
-const array1 = [2,5,1,2,3,5,1,2,4]
-const array2 = [2,1,1,2,3,5,1,2,4]
-
-function findRecurring(arr){
-    // const value1 = []
-    // const value2 = []
-    // for(let i = 0; i < arr.length; i++){
-    //     value1.push(arr[i])
-    //     value2.push(arr[i])
-    // }
-
-
-    let counts = {}
-
-    for(let i = 0; i < arr.length; i++){
-        if(counts[arr[i]]){
-            // console.log(i,"first")
-            counts[arr[i]] +=1
-             console.log(counts)
-        } else {
-            // console.log(i,"last")
-            counts[arr[i]] =1
-        }
+function firstRecurringCharacted(input) {
+  for (let i = 0; i < input.length; i++) {
+    for (let j = i + 1; j < input.length; j++) {
+      if (input[i] === input[j]) {
+        console.log(input[i]);
+        return input[i];
+      }
     }
-    // for(let prop in counts){
-    //     if(counts[prop] >= 2){
-    //         console.log(prop + " counted: " + counts[prop] + " times.")
-    //     }
-    // }
-    console.log(counts)
+  }
+  return undefined;
 }
 
-findRecurring(array1)
-// class Recurring
+firstRecurringCharacted(2);
