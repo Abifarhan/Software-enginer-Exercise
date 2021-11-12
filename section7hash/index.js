@@ -47,19 +47,33 @@ class HashTable {
     }
     return undefined
   }
+
+  keys(){
+    const keyArray = []
+    for(let i=0; i < this.data.length; i++){
+      if(this.data[i]){
+        keyArray.push(this.data[i][0][0][0])
+      }
+    }
+    console.log("ini bagian dari key",keyArray)
+    return keyArray
+  }
 }
 
-const myHashTable = new HashTable(1);
+const myHashTable = new HashTable(50);
 // var testing1 = myHashTable._hash("grapes");
 // console.log(testing1);
 // var a = myHashTable.set('grapes')
 // var total = myHashTable.get
 // console.log(total)
 
-// myHashTable.set("grapes", 10000);
-// myHashTable.set("apple", 10000);
+myHashTable.set("apple", 54);
 myHashTable.set("grapes", 10000);
-myHashTable.set("apples", 54);
+myHashTable.set("orange", 53);
+// myHashTable.set("apples", 54);
 
-myHashTable.get('grapes')
+// myHashTable.get('grapes')
+var a = myHashTable.keys()
+// var getValue = myHashTable.get("apple")
+// console.log(getValue)
 
