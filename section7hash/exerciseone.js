@@ -25,9 +25,11 @@ function findRecurring(arr){
 
     for(let i = 0; i < arr.length; i++){
         if(counts[arr[i]]){
-            var a = counts[arr[i]] +=1
-            // console.log()
+            // console.log(i,"first")
+            counts[arr[i]] +=1
+             console.log(counts)
         } else {
+            // console.log(i,"last")
             counts[arr[i]] =1
         }
     }
