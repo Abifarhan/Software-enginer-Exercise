@@ -9,7 +9,18 @@
 // It should return undefined
 
 
-function findRecurring(arr){
+const array1 = [2,5,1,2,3,5,1,2,4]
+const array2 = [2,1,1,2,3,5,1,2,4]
 
-    
+function findRecurring(arr){
+    const value1 = []
+    const value2 = []
+    for(let i = 0; i < arr.length; i++){
+        value1.push(arr[i])
+    }
+    console.log(value1)
+    console.log(value2)
 }
+
+findRecurring(array1)
+// class Recurring
