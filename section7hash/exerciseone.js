@@ -29,6 +29,7 @@ function firstRecurringCharacted2(input){
         console.log(undefined)
         if(map[input[i]])
     }
+    // adding then
     // testing adding
     // adding part 2
 }
