@@ -26,20 +26,17 @@ const array2 = [2, 1, 1, 2, 3, 5, 1, 2, 4];
 function firstRecurringCharacted2(input) {
   let map = {};
   for (let i = 0; i < input.length; i++) {
-    console.log(undefined);
+    console.log(map[input[i]]);
     if (map[input[i]]) {
-      console.log(map);
+      console.log("ini hasil nya",map);
       return input[i];
     } else {
-      console.log(map);
-      map[input[i]];
+      map[input[i]] = i;
+      console.log("ini hasil nya kedua",map);
     }
   }
-  return map;
-  // adding then
-  // testing adding
-  // adding part 2
+  return undefined;
 }
 
 var a = firstRecurringCharacted2(array1);
-// console.log(a)
+console.log(a)
