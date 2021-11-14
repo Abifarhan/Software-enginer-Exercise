@@ -8,7 +8,6 @@
 // Given an array = [2,3,4,5]
 // It should return undefined
 
-const array1 = [2, 5, 1, 2, 3, 5, 1, 2, 4];
 const array2 = [2, 1, 1, 2, 3, 5, 1, 2, 4];
 
 // function firstRecurringCharacted(input) {
@@ -23,16 +22,17 @@ const array2 = [2, 1, 1, 2, 3, 5, 1, 2, 4];
 //   return undefined;
 // }
 
+const array1 = [2, 5, 1, 2, 3, 5, 1, 2, 4];
 function firstRecurringCharacted2(input) {
   let map = {};
   for (let i = 0; i < input.length; i++) {
-    console.log(map[input[i]]);
-    if (map[input[i]]) {
-      console.log("ini hasil nya",map);
+    // console.log(map[input[i]]);
+    if (map[input[i]] !== undefined) {
+    //   console.log("ini hasil nya",map);
       return input[i];
     } else {
       map[input[i]] = i;
-      console.log("ini hasil nya kedua",map);
+      console.log("ini hasil nya input",map);
     }
   }
   return undefined;
@@ -40,3 +40,4 @@ function firstRecurringCharacted2(input) {
 
 var a = firstRecurringCharacted2(array1);
 console.log(a)
+
