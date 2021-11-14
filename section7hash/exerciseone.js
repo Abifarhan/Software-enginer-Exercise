@@ -23,15 +23,23 @@ const array2 = [2, 1, 1, 2, 3, 5, 1, 2, 4];
 //   return undefined;
 // }
 
-function firstRecurringCharacted2(input){
-    let map = {}
-    for (let i = 0; i < input.length; i++){
-        console.log(undefined)
-        if(map[input[i]])
+function firstRecurringCharacted2(input) {
+  let map = {};
+  for (let i = 0; i < input.length; i++) {
+    console.log(undefined);
+    if (map[input[i]]) {
+      console.log(map);
+      return input[i];
+    } else {
+      console.log(map);
+      map[input[i]];
     }
-    // adding then
-    // testing adding
-    // adding part 2
+  }
+  return map;
+  // adding then
+  // testing adding
+  // adding part 2
 }
 
-firstRecurringCharacted(2);
+var a = firstRecurringCharacted2(array1);
+// console.log(a)
