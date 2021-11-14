@@ -30,6 +30,7 @@ function firstRecurringCharacted2(input){
         if(map[input[i]])
     }
     // testing adding
+    // adding part 2
 }
 
 firstRecurringCharacted(2);
