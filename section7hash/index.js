@@ -13,22 +13,33 @@ class HashTable {
     return hash;
   }
 
-  set(key, value) {
-    let address = this._hash(key);
-    if (!this.data[address]) {
-      this.data[address] = [];
-      // console.log(this.data[address]);
-      // this is the hashmap work
-      // var c = this.data[address].push([key, value]);
-      // console.log(c);
-      // console.log(this.data);
-      // console.log("this is the value", address);
+  // set(key, value) {
+  //   let address = this._hash(key);
+  //   if (!this.data[address]) {
+  //     this.data[address] = [];
+  //     // console.log(this.data[address]);
+  //     // this is the hashmap work
+  //     // var c = this.data[address].push([key, value]);
+  //     // console.log(c);
+  //     // console.log(this.data);
+  //     // console.log("this is the value", address);
+  //   }
+  //   this.data[address].push([key, value]);
+  //   // console.log(this.data)
+  //   return this.data
+  // }
+
+  set(key,value){
+    let address = this._hash(key)
+    if(!this.data[address]){
+      this.data[address] = []
+
+      this.data[address].push([key,value])
     }
-    this.data[address].push([key, value]);
-    // console.log(this.data)
+    this.data[address].push([key,value])
+
     return this.data
   }
-
   // get() {
   //   var returnValue = this.set;
   // }
@@ -52,7 +63,7 @@ class HashTable {
     const keyArray = []
     for(let i=0; i < this.data.length; i++){
       if(this.data[i]){
-        keyArray.push(this.data[i][0][0][0])
+        keyArray.push(this.data[i][0][0][1])
       }
     }
     console.log("ini bagian dari key",keyArray)
@@ -67,13 +78,21 @@ const myHashTable = new HashTable(50);
 // var total = myHashTable.get
 // console.log(total)
 
-myHashTable.set("apple", 54);
-myHashTable.set("grapes", 10000);
-myHashTable.set("orange", 53);
+// myHashTable.set("apple", 54);
+// myHashTable.set("grapes", 10000);
+// myHashTable.set("orange", 53);
 // myHashTable.set("apples", 54);
 
-// myHashTable.get('grapes')
+myHashTable.set("apple",54)
+myHashTable.set("grape", 90)
+myHashTable.set("coconut", 80)
+myHashTable.get("grape")
+
 var a = myHashTable.keys()
+console.log(a)
+
+// myHashTable.get('grapes')
+// var a = myHashTable.keys()
 // var getValue = myHashTable.get("apple")
 // console.log(getValue)
 
