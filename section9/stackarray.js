@@ -22,9 +22,13 @@ class Stack{
 }
 
 var myStack = new Stack()
-myStack.push("abi")
-myStack.push("brian")
-myStack.push("villa")
-myStack.push("siti")
+myStack.push('pulpen')
+myStack.push('buku')
 myStack.pop()
 console.log(myStack.peek())
+// myStack.push("abi")
+// myStack.push("brian")
+// myStack.push("villa")
+// myStack.push("siti")
+// myStack.pop()
+// console.log(myStack.peek())

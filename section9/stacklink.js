@@ -28,6 +28,7 @@ class Stack{
             this.top.next = holdingPointer
         }
 
+
         this.length++
         return this
     }
@@ -47,10 +48,18 @@ class Stack{
 }
 
 var myStack = new Stack()
-myStack.push("abi")
-myStack.push("brian")
-myStack.push("villa")
+myStack.push("Tiara")
+myStack.push("Mella")
+myStack.push("Tika")
 myStack.pop()
 myStack.pop()
 myStack.pop()
 console.log(myStack.peek())
+
+// myStack.push("abi")
+// myStack.push("brian")
+// myStack.push("villa")
+// myStack.pop()
+// myStack.pop()
+// myStack.pop()
+// console.log(myStack.peek())
